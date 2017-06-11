@@ -66,6 +66,7 @@ h4 {
     width: inherit;
     text-align: center;
     height: 70px;
+    min-width: 1155px;
 }
 
 .myNavigator a {
@@ -86,6 +87,7 @@ h4 {
     background-color: #014978;
     color: white;
     border-bottom: 70px solid #13005f;
+    min-width: 1155px;
 }
 
 .about h1,
@@ -125,6 +127,7 @@ h3 {
     border-bottom: 70px solid #13005f;
     text-align: center;
     display: inline-block;
+    min-width: 1155px;
 }
 
 .portfolio h1 {
