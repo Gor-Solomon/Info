@@ -1,0 +1,232 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background: #036fab;
+    -moz-transform: scale(0.8, 0.8);
+    /* Moz-browsers */
+    zoom: 0.8;
+    /* Other non-webkit browsers */
+}
+
+.myHeader {
+    background: #ffffff url("img/topBackImg.png") no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    width: inherit;
+}
+
+.pauseBtn {
+    display: inline-block;
+    padding-left: 600px;
+    height: 64px;
+    width: 64px;
+    position: relative;
+    bottom: 198px;
+}
+
+.pauseBtn img {
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+}
+
+.pauseBtn img:hover {
+    cursor: pointer;
+}
+
+.myPic {
+    display: inline-block;
+    padding-left: 200px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.myPic img {
+    border-radius: 20%;
+    height: 262px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.myPic h1,
+h4 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    padding-top: 11px;
+    color: white;
+}
+
+.myNavigator {
+    background-color: #13005f;
+    width: inherit;
+    text-align: center;
+    height: 70px;
+}
+
+.myNavigator a {
+    display: inline-block;
+    color: white;
+    padding: 20px;
+    font-size: x-large;
+    transition: font 0.7s ease
+}
+
+.myNavigator a:hover {
+    background-color: #1300DA;
+    font-size: xx-large;
+}
+
+.about {
+    width: inherit;
+    background-color: #014978;
+    color: white;
+    border-bottom: 70px solid #13005f;
+}
+
+.about h1,
+h3 {
+    margin: 0;
+}
+
+.about h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.abouth31 {
+    padding-left: 27px;
+    text-align: center;
+}
+
+.abouth32 {
+    padding-left: 40px;
+}
+
+.about ul {
+    padding-left: 60px;
+    margin: 0;
+}
+
+.about ul li a {
+    font-size: x-large;
+    color: white;
+}
+
+.section {
+    width: inherit;
+    background-color: #014978;
+    color: white;
+    border-bottom: 70px solid #13005f;
+    text-align: center;
+    display: inline-block;
+}
+
+.portfolio h1 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.portfolio h3 {
+    display: inline-block;
+    padding: 0 135px 0 58px;
+}
+
+.subProtfilio a {
+    height: 400px;
+    width: 400px;
+    border: 1px solid white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.acradGame {
+    background: url("img/pingPong.png") no-repeat;
+    background-size: cover;
+}
+
+.yerknain {
+    background: url("img/yerknain.png") no-repeat;
+    background-size: cover;
+}
+
+.inspiration h1 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.inspirationLinks {
+    padding-left: 30px;
+    text-align: center;
+}
+
+.inspirationLinks a {
+    height: 300px;
+    width: 300px;
+    border: 1px solid white;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+    background-size: cover;
+}
+
+.Nadia {
+    background: url("img/Nadia.jpg") no-repeat;
+}
+
+.Evangelion {
+    background: url("img/Evangelion.jpg") no-repeat;
+}
+
+.Beethoven {
+    background: url("img/Beethoven.jpg") no-repeat;
+}
+
+.bach {
+    background: url("img/bach.jpg") no-repeat;
+}
+
+.krishnamurti {
+    background: url("img/krishnamurti.jpg") no-repeat;
+}
+
+.orwell {
+    background: url("img/orwell.jpg") no-repeat;
+}
+
+.contact h1,
+h3 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.contactLinks {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.contactLinks a img {
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    width: 50px;
+    margin: 10px;
+}
