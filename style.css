@@ -11,12 +11,12 @@ body {
     background: #ffffff url("img/topBackImg.png") no-repeat;
     background-size: cover;
     min-height: 400px;
-    width: inherit;
+    width: 1171px;
 }
 
 .pauseBtn {
     display: inline-block;
-    padding-left: 600px;
+    padding-left: 540px;
     height: 64px;
     width: 64px;
     position: relative;
@@ -35,7 +35,7 @@ body {
 
 .myPic {
     display: inline-block;
-    padding-left: 200px;
+    padding-left: 171px;
     padding-top: 50px;
     text-align: center;
 }
