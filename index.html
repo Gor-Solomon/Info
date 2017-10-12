@@ -3,11 +3,11 @@
 <html>
 
 <head>
+    <meta http-equiv="Cache-control" content="public">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/pageIcon.gif">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="code.js"></script>
     <title>Goruen</title>
 </head>
 
@@ -83,6 +83,27 @@
             </h3>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $(".myNavigator").find("a").click(function(e) {
+                e.preventDefault();
+                var section = $(this).attr("href");
+                $("html, body").animate({
+                    scrollTop: $(section).offset().top
+                });
+            });
+
+            $('#pauseBtn').click(function(e) {
+                if ($("#Nadia_audio").get(0).paused == false) {
+                    $("#Nadia_audio").get(0).pause();
+                } else {
+                    $("#Nadia_audio").get(0).play();
+                }
+            });
+            $("#Nadia_audio").get(0).play();
+            $('#Nadia_audio').prop("volume", 0.05);
+        });
+    </script>
 </body>
 
 </html>
