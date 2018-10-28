@@ -1,5 +1,5 @@
 body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
     background: #036fab;
     -moz-transform: scale(0.8, 0.8);
     /* Moz-browsers */
@@ -42,12 +42,11 @@ body {
 
 .myPic img {
     border-radius: 20%;
-    height: 262px;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    display: table-cell;
+    display: block;
     vertical-align: middle
 }
 
@@ -152,6 +151,16 @@ h3 {
     margin-top: 20px;
     margin-bottom: 20px;
     display: inline-block;
+}
+
+.subProtfilio h3 {
+	padding: 0;
+	display: block;
+	text-align: center;
+}
+
+.subProtfilio div {
+	display: inline-block;
 }
 
 .acradGame {
