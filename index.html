@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
-<html>
-
 <head>
+	<meta charset="UTF-8">
     <meta http-equiv="Cache-control" content="public">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -12,7 +11,7 @@
 </head>
 
 <body>
-    <audio id="Nadia_audio" src="Nadia.mp3"></audio>
+    <audio id="Nadia_audio" src="Nadia.mp3" ></audio>
     <div class="container">
         <header class="myHeader">
             <div class="pauseBtn">
@@ -23,7 +22,7 @@
                 <img src="img/myPic.jpg">
                 <h1 style="color: red; margin-bottom: 4px;">Goruen Soghomonian</h1>
                 <br>
-                <h4>Trust Me, I'm an <span style="color:red">"Engineer"</span> ;)</h4>
+                <h4>Trust Me, I'm an <span style="color:red">"Engineer"</span>...</h4>
             </div>
         </header>
         <nav class="myNavigator">
@@ -40,6 +39,7 @@
                 <li><a target="_blank" href="http://www.mabcoonline.biz/">Mabco</a></li>
                 <li><a target="_blank" href="http://www.armsoft.am/">ArmSoft</a></li>
                 <li><a target="_blank" href="https://www.oracle.com/index.html">Oracle</a></li>
+				<li><a target="_blank" href="https://www.alenasolutions.com">Alena Soluntions</a></li>
             </ul>
             <br>
             <h3 class="abouth32">Languages: Arabic, English, Armenian.</h3>
@@ -47,14 +47,22 @@
         </div>
         <div class="portfolio section" id="portfolio">
             <h1>&#60;portfolio inventive="101%" /&#62;</h1>
+			<br>
             <div class="subProtfilio">
-                <h3>Yerknain:<br>Secure Online BPM System</h3>
-                <h3>Paddle-ball:<br>Arcade game</h3>
-                <h3>Artificial Consciousness:<br>Abstract Representation</h3>
-                <br>
-                <a class="yerknain" target="_blank" href="https://github.com/Talxolenia/Yerknain_BPM.git"></a>
-                <a class="acradGame" target="_blank" href="http://arcadgame.bitballoon.com/"></a>
-                <a class="ac" target="_blank" href="https://youtu.be/yTMgvx5y4BA"></a>
+				<div>
+                  <h3>Yerknain:<br>Secure Online BPM System</h3>
+			      <a class="yerknain" target="_blank" href="https://github.com/Talxolenia/Yerknain_BPM.git"></a>
+				</div>
+				<div>
+                  <h3>Paddle-ball:<br>Arcade game</h3>
+                  <a class="acradGame" target="_blank" href="http://arcadgame.bitballoon.com/"></a>
+				</div>
+				<br>
+				<br>
+				<div>
+				  <h3>Artificial Consciousness:<br>Abstract Representation</h3>
+                  <a class="ac" target="_blank" href="https://youtu.be/yTMgvx5y4BA"></a>
+				</div>
             </div>
         </div>
         <div class="inspiration section" id="inspiration">
@@ -102,8 +110,8 @@
                     $("#Nadia_audio").get(0).play();
                 }
             });
-            $("#Nadia_audio").get(0).play();
-            $('#Nadia_audio').prop("volume", 0.05);
+			//$("#Nadia_audio").get(0).play();
+            $('#Nadia_audio').prop("volume", 1);
         });
     </script>
 </body>
