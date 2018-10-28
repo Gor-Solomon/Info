@@ -159,6 +159,11 @@ h3 {
     background-size: cover;
 }
 
+.ac {
+    background: url("img/AC.jpg") no-repeat;
+    background-size: cover;
+}
+
 .yerknain {
     background: url("img/yerknain.png") no-repeat;
     background-size: cover;
