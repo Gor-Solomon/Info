@@ -1,7 +1,10 @@
 body { 
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    color: #1e293b; 
-    overflow-x: hidden; 
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    background: #036fab;
+    -moz-transform: scale(0.8, 0.8);
+    /* Moz-browsers */
+    zoom: 0.8;
+    /* Other non-webkit browsers */
 }
 
 /* Ethereal Frosted Glass */
