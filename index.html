@@ -1,120 +1,368 @@
 <!DOCTYPE html>
-
+<html lang="en" class="scroll-smooth">
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="Cache-control" content="public">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css?v=1">
-    <link rel="icon" href="img/pageIcon.gif">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Gor.Solomon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gor Solomon | The Architect of Light</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600;800&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        radiant: '#ffffff',
+                        sky: '#e0f2fe',
+                        gold: '#fbbf24',
+                        twilight: '#818cf8',
+                        textMain: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body class="antialiased font-sans relative">
 
-<body>
-    <audio id="Nadia_audio" src="Nadia.mp3" ></audio>
-    <div class="container">
-        <header class="myHeader">
-            <div class="pauseBtn">
-                <img src="img/pausePlay.png" id="pauseBtn">
+    <canvas id="lightCanvas"></canvas>
+
+    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-sky-200/50 rounded-full blur-[100px] -z-10"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-100/50 rounded-full blur-[100px] -z-10"></div>
+
+    <main class="max-w-6xl mx-auto px-6 py-24 relative z-10 space-y-40">
+        
+        <header class="min-h-[85vh] flex flex-col justify-center text-center reveal">
+            <p class="uppercase tracking-[0.3em] text-sm text-indigo-500 font-semibold mb-4">Genesis of Architecture</p>
+            <h1 class="text-7xl md:text-9xl font-extrabold mb-8 tracking-tighter text-slate-800">
+                Gor <span class="text-glow-gold">Solomon</span>
+            </h1>
+
+            <div class="flex justify-center mb-10 reveal">
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-tr from-gold to-twilight shadow-2xl relative">
+                    <img src="img/myPic.jpg" alt="Gor Solomon" class="w-full h-full object-cover rounded-full border-4 border-white">
+                    <div class="absolute bottom-2 right-2 w-6 h-6 bg-green-400 border-4 border-white rounded-full animate-pulse" title="Available for Architecture"></div>
+                </div>
             </div>
-            <div class="myPic">
-                <h1 style="margin-bottom: 11px;">Hello, I'm</h1>
-                <img src="img/myPic.jpg">
-                <h1 style="color: red; margin-bottom: 4px;">Gor Solomon</h1>
-                <br>
-                <h4>Trust Me, I'm an <span style="color:red">"Engineer"</span>...</h4>
+
+            <h2 class="text-3xl md:text-5xl font-serif italic text-slate-500 max-w-4xl mx-auto leading-relaxed">
+                Elevating complex systems into breathing, intelligent ecosystems.
+            </h2>
+            
+            <div class="mt-16 flex justify-center gap-6">
+                <div class="w-64 h-80 rounded-[2rem] glass-light p-2 float-img shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop" alt="Abstract Data" class="w-full h-full object-cover rounded-[1.5rem] opacity-90">
+                </div>
+                <div class="w-64 h-80 rounded-[2rem] glass-light p-2 float-img shadow-2xl" style="animation-delay: -4s;">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop" alt="Developer Code" class="w-full h-full object-cover rounded-[1.5rem] opacity-90">
+                </div>
             </div>
         </header>
-        <nav class="myNavigator">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#inspiration">Inspirational Source</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="about" id="about">
-            <h1>&#60;About humanist="true" &#62;</h1>
-            <h3 class="abouth31">More than 5 years experience in Software & Hardware engineering enhanced by Quality Assurance methodology ,gained dynamic and out-of-box insight by working in different companies in different countries.</h3>
-            <h3 class="abouth32"> I have worked at the following companies:</h3>
-            <ul>
-                <li><a target="_blank" href="http://www.mabcoonline.biz/">Mabco</a></li>
-                <li><a target="_blank" href="http://www.armsoft.am/">ArmSoft</a></li>
-                <li><a target="_blank" href="https://www.oracle.com/index.html">Oracle</a></li>
-                <li><a target="_blank" href="#">Beroea Soft</a></li>
-                <li><a target="_blank" href="https://www.dataart.com/">DataArt</a></li>
-            </ul>
-            <br>
-            <h3 class="abouth32">Languages: Arabic, English, Armenian.</h3>
-            <h1>&#60;/About&#62;</h1>
-        </div>
-        <div class="portfolio section" id="portfolio">
-            <h1>&#60;portfolio inventive="101%" /&#62;</h1>
-			<br>
-            <div class="subProtfilio">
-				<div>
-                  <h3>Yerknain:<br>Secure Online BPM System</h3>
-			      <a class="yerknain" target="_blank" href="https://github.com/Talxolenia/Yerknain_BPM.git"></a>
-				</div>
-				<div>
-                  <h3>Paddle-ball:<br>Arcade game</h3>
-                  <a class="acradGame" target="_blank" href="http://arcadgame.bitballoon.com/"></a>
-				</div>
-				<br>
-				<br>
-				<div>
-				  <h3>Artificial Consciousness:<br>Abstract Representation</h3>
-                  <a class="ac" target="_blank" href="https://youtu.be/yTMgvx5y4BA"></a>
-				</div>
-            </div>
-        </div>
-        <div class="inspiration section" id="inspiration">
-            <h1>.inspiration {</h1>
-            <div class="inspirationLinks">
-                <a class="Nadia" target="_blank" href="https://youtu.be/_5Xd9bpQzwY"></a>
-                <a class="Evangelion" target="_blank" href="https://youtu.be/b-9fhRh4aPs"></a>
-                <a class="Beethoven" target="_blank" href="https://youtu.be/IInG5nY_wrU?t=1h13m22s"></a>
-                <a class="bach" target="_blank" href="https://youtu.be/DJh6i-t_I1Q"></a>
-                <a class="krishnamurti" target="_blank" href="https://youtu.be/yHcOeEjV06c"></a>
-                <a class="orwell" target="_blank" href="https://youtu.be/kq_agNNGcA4"></a>
-            </div>
-            <h1>}</h1>
-        </div>
-        <div class="section contact" id="contact">
-            <h3>Email: gorun.solomon@gmail.com</h3>
-            <h3>Phone: +37455972070</h3>
-            <h3>Adress: Armenia, Yerevan</h3>
-            <h3>Networks:
-                <span class="contactLinks">
-                <a href="https://www.facebook.com/GorAlphas" target="_blank">
-                    <img src="img/Facebook.png" alt="Facebook Link"></a>
-                <a href="https://www.linkedin.com/in/gor-solomon/">
-                    <img src="img/Linkedin.png" alt="linkedin Link"></a>
-                <a href="https://github.com/Gor-Solomon" target="_blank">
-                    <img src="img/Github.png" alt="GitHub Link"></a>
-            </span>
-            </h3>
-        </div>
-    </div>
-    <script>
-        $(document).ready(function() {
-            $(".myNavigator").find("a").click(function(e) {
-                e.preventDefault();
-                var section = $(this).attr("href");
-                $("html, body").animate({
-                    scrollTop: $(section).offset().top
-                });
-            });
 
-            $('#pauseBtn').click(function(e) {
-                if ($("#Nadia_audio").get(0).paused == false) {
-                    $("#Nadia_audio").get(0).pause();
-                } else {
-                    $("#Nadia_audio").get(0).play();
+        <section class="reveal glass-light p-12 md:p-20 rounded-[3rem]">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-sm uppercase tracking-widest text-indigo-500 font-bold mb-4">Cognitive Architecture</h3>
+                    <h4 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 leading-tight">Where Psychology Meets Logic.</h4>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        My foundation isn't just code; it's the human mind. Studying Cognitive Psychology and Neuropsychology at the University of Cambridge, alongside Contract Law at Harvard, taught me that software is a reflection of human intent. I design systems that feel intuitive, seamless, and profound.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white rounded-full text-sm font-semibold text-slate-700 shadow-sm border border-slate-100">Thinking, Fast and Slow</span>
+                        <span class="px-4 py-2 bg-white rounded-full text-sm font-semibold text-slate-700 shadow-sm border border-slate-100">Ex Machina</span>
+                        <span class="px-4 py-2 bg-white rounded-full text-sm font-semibold text-slate-700 shadow-sm border border-slate-100">Gödel, Escher, Bach</span>
+                    </div>
+                </div>
+                <div class="h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=1964&auto=format&fit=crop" alt="Abstract Light" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-32">
+            <div class="text-center reveal mb-20">
+                <h3 class="text-5xl font-bold text-slate-800">Architectural Epochs</h3>
+                <p class="text-xl text-slate-500 mt-4 font-serif italic">14+ Years of Enterprise Evolution</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                <div class="w-full md:w-1/2 h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop" alt="AI Analytics" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 space-y-4">
+                    <div class="inline-block px-4 py-1 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold tracking-widest uppercase">The Leadership Era</div>
+                    <h4 class="text-3xl font-bold text-slate-800">Chief Technology Officer</h4>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Spearheaded the technical vision for an AI-Powered compliance ecosystem. I architected intelligent frameworks that automated regulatory reporting and suspicious activity tracking, pushing the boundaries of operational efficiency.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 reveal">
+                <div class="w-full md:w-1/2 h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop" alt="Server Data" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 space-y-4">
+                    <div class="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold tracking-widest uppercase">The Scalability Era</div>
+                    <h4 class="text-3xl font-bold text-slate-800">Solutions Architect</h4>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Led the reengineering of legacy systems. By applying microservices and Domain-Driven Design (DDD), I achieved a massive reduction in transaction error rates—dropping them from 30% to a mere 2%.
+                    </p>
+                    <div class="flex items-end gap-2 mt-4">
+                        <span class="text-5xl font-black text-slate-300 line-through">30%</span>
+                        <span class="text-6xl font-black text-glow-gold">2%</span>
+                        <span class="text-sm font-bold text-slate-500 mb-2 uppercase tracking-widest">Error Rate</span>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="flex flex-col md:flex-row items-center gap-12 reveal">
+                <div class="w-full md:w-1/2 h-[400px] rounded-[2rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="Global Network" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 space-y-4">
+                    <div class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-widest uppercase">The Optimization Era</div>
+                    <h4 class="text-3xl font-bold text-slate-800">Web Applications Engineer</h4>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Modernized legacy systems through rigorous OOP design principles and web API services. The result? A 20% faster delivery pipeline and a 30% surge in user satisfaction metrics.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal text-center my-32">
+            <h3 class="text-5xl font-bold text-slate-800 mb-4">The Ecosystems I Wield</h3>
+            <p class="text-xl text-slate-500 mb-16 font-serif italic max-w-2xl mx-auto">Mastery across the full spectrum of modern enterprise architecture.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-4">Core Engineering</h4>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li>✦ C# & .NET Core</li>
+                        <li>✦ Python & FastAPI</li>
+                        <li>✦ React & Next.js</li>
+                        <li>✦ JavaScript & TypeScript</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-4">Cloud & Scalability</h4>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li>✦ AWS & Azure Architecture</li>
+                        <li>✦ Docker & Kubernetes (AKS)</li>
+                        <li>✦ Event-Driven & Microservices</li>
+                        <li>✦ CI/CD & CI Pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-4">AI & Data Intel</h4>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li>✦ LLMs & AI Agents</li>
+                        <li>✦ RAG Pipelines & LangChain</li>
+                        <li>✦ Vector Databases & SQL</li>
+                        <li>✦ PostgreSQL & MongoDB</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-4">Web3 & Trust</h4>
+                    <ul class="space-y-3 text-slate-600 font-medium">
+                        <li>✦ Blockchain Foundations</li>
+                        <li>✦ Solidity Engineering</li>
+                        <li>✦ Smart Contract Logic</li>
+                        <li>✦ Web3.js Integration</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mt-8">
+                <div class="bg-white/50 p-6 rounded-2xl border border-white">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">DeepLearning.AI</p>
+                    <p class="text-slate-800 font-semibold">Generative AI with Large Language Models</p>
+                </div>
+                <div class="bg-white/50 p-6 rounded-2xl border border-white">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Cal Poly State University</p>
+                    <p class="text-slate-800 font-semibold">Ethereum and Solidity</p>
+                </div>
+                <div class="bg-white/50 p-6 rounded-2xl border border-white">
+                    <p class="text-xs text-slate-400 font-bold uppercase mb-1">Harvard University</p>
+                    <p class="text-slate-800 font-semibold">Contract Law</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal glass-light p-12 md:p-20 rounded-[3rem] text-center mb-32 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-300/30 rounded-full blur-[80px] -z-10"></div>
+            
+            <h3 class="text-5xl font-extrabold text-slate-800 mb-6">Let's Build the Future.</h3>
+            <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
+                Ready to architect your next enterprise ecosystem or AI-driven platform? Let's get on a call and transform your vision into reality.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+                <a href="mailto:gorun.solomon@gmail.com" class="px-10 py-5 bg-gradient-to-r from-indigo-500 to-twilight text-white rounded-full font-bold text-lg shadow-[0_10px_20px_rgba(99,102,241,0.3)] hover:shadow-[0_15px_30px_rgba(99,102,241,0.5)] hover:scale-105 transition-all duration-300">
+                    Schedule a Call
+                </a>
+                
+                <a href="https://linkedin.com/in/gor-solomon" target="_blank" class="px-10 py-5 bg-white text-indigo-600 border border-indigo-100 rounded-full font-bold text-lg shadow-sm hover:shadow-md hover:bg-indigo-50 transition-all duration-300">
+                    LinkedIn
+                </a>
+                
+                <a href="https://github.com/Gor-Solomon" target="_blank" class="px-10 py-5 bg-white text-slate-700 border border-slate-200 rounded-full font-bold text-lg shadow-sm hover:shadow-md hover:bg-slate-50 transition-all duration-300">
+                    GitHub
+                </a>
+            </div>
+            
+            <p class="text-slate-400 font-mono text-sm uppercase tracking-widest mt-8">Based in Yerevan, Armenia • +374 55 972070</p>
+        </section>
+
+    </main>
+
+    <div id="music-player" class="fixed bottom-6 right-6 glass-light p-4 rounded-2xl flex items-center gap-4 z-50 cursor-pointer hover:bg-white/80 transition-all shadow-xl border border-white">
+        <div class="w-12 h-12 rounded-full bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 shadow-sm">
+            <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="pr-2">
+            <p class="text-sm font-bold text-slate-800 mb-1">Nadia.mp3</p>
+            <div id="equalizer" class="paused flex items-end h-[16px]">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+        </div>
+        <audio id="bg-audio" loop>
+            <source src="Nadia.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // 1. Scroll Reveal Magic
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
                 }
-            });
-			//$("#Nadia_audio").get(0).play();
-            $('#Nadia_audio').prop("volume", 1);
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Trigger on load
+
+        // 2. Music Player Logic
+        const player = document.getElementById('music-player');
+        const audio = document.getElementById('bg-audio');
+        const equalizer = document.getElementById('equalizer');
+        const playIcon = document.getElementById('play-icon');
+        let isPlaying = false;
+
+        player.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                equalizer.classList.add('paused');
+                playIcon.innerHTML = '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />';
+            } else {
+                audio.play();
+                audio.volume = 0.4;
+                equalizer.classList.remove('paused');
+                playIcon.innerHTML = '<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />';
+            }
+            isPlaying = !isPlaying;
         });
+
+        // 3. Bright Canvas Network Magic
+        const canvas = document.getElementById('lightCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray = [];
+        const colors = ['#fbbf24', '#818cf8', '#e0f2fe', '#ffffff'];
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.width * canvas.height) / 8000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+                
+                // Draw connecting lines
+                for (let j = i; j < particlesArray.length; j++) {
+                    const dx = particlesArray[i].x - particlesArray[j].x;
+                    const dy = particlesArray[i].y - particlesArray[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 150) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(129, 140, 248, ${0.15 - distance/1000})`; // Very soft indigo lines
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+                        ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+                        ctx.stroke();
+                        ctx.closePath();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            init();
+        });
+
+        init();
+        animate();
     </script>
 </body>
-
 </html>

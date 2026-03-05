@@ -1,249 +1,63 @@
-body {
-    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-    background: #036fab;
-    -moz-transform: scale(0.8, 0.8);
-    /* Moz-browsers */
-    zoom: 0.8;
-    /* Other non-webkit browsers */
+body { 
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    color: #1e293b; 
+    overflow-x: hidden; 
 }
 
-.myHeader {
-    background: #ffffff url("img/topBackImg.png") no-repeat;
-    background-size: cover;
-    min-height: 400px;
-    width: 1171px;
+/* Ethereal Frosted Glass */
+.glass-light {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(148, 163, 184, 0.15);
 }
 
-.pauseBtn {
-    display: inline-block;
-    padding-left: 540px;
-    height: 64px;
-    width: 64px;
-    position: relative;
-    bottom: 198px;
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(129, 140, 248, 0.15);
+    border-color: #818cf8;
 }
 
-.pauseBtn img {
-    height: 64px;
-    width: 64px;
-    border-radius: 100%;
+/* Golden Text Glow */
+.text-glow-gold {
+    background: linear-gradient(to right, #d97706, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
 }
 
-.pauseBtn img:hover {
-    cursor: pointer;
+/* Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.myPic {
-    display: inline-block;
-    padding-left: 171px;
-    padding-top: 50px;
-    text-align: center;
+/* Floating Image Animation */
+.float-img { animation: slowFloat 8s ease-in-out infinite; }
+@keyframes slowFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.02); }
 }
 
-.myPic img {
-    border-radius: 20%;
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: block;
-    vertical-align: middle
-}
+/* Light Canvas Background */
+#lightCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.8; pointer-events: none; }
 
-.myPic h1,
-h4 {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 50px;
-    padding-top: 11px;
-    color: white;
-}
-
-.myNavigator {
-    background-color: #13005f;
-    width: inherit;
-    text-align: center;
-    height: 70px;
-    min-width: 1155px;
-}
-
-.myNavigator a {
-    display: inline-block;
-    color: white;
-    padding: 20px;
-    font-size: x-large;
-    transition: font 0.7s ease
-}
-
-.myNavigator a:hover {
-    background-color: #1300DA;
-    font-size: xx-large;
-}
-
-.about {
-    width: inherit;
-    background-color: #014978;
-    color: white;
-    border-bottom: 70px solid #13005f;
-    min-width: 1155px;
-}
-
-.about h1,
-h3 {
-    margin: 0;
-}
-
-.about h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-}
-
-.abouth31 {
-    padding-left: 27px;
-    text-align: center;
-}
-
-.abouth32 {
-    padding-left: 40px;
-}
-
-.about ul {
-    padding-left: 60px;
-    margin: 0;
-}
-
-.about ul li a {
-    font-size: x-large;
-    color: white;
-}
-
-.section {
-    width: inherit;
-    background-color: #014978;
-    color: white;
-    border-bottom: 70px solid #13005f;
-    text-align: center;
-    display: inline-block;
-    min-width: 1155px;
-}
-
-.portfolio h1 {
-    margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    text-align: left;
-}
-
-.portfolio h3 {
-    display: inline-block;
-    padding: 0 135px 0 58px;
-}
-
-.subProtfilio a {
-    height: 400px;
-    width: 400px;
-    border: 1px solid white;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-}
-
-.subProtfilio h3 {
-	padding: 0;
-	display: block;
-	text-align: center;
-}
-
-.subProtfilio div {
-	display: inline-block;
-}
-
-.acradGame {
-    background: url("img/pingPong.png") no-repeat;
-    background-size: cover;
-}
-
-.ac {
-    background: url("img/AC.jpg") no-repeat;
-    background-size: cover;
-}
-
-.yerknain {
-    background: url("img/yerknain.png") no-repeat;
-    background-size: cover;
-}
-
-.inspiration h1 {
-    margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    text-align: left;
-}
-
-.inspirationLinks {
-    padding-left: 30px;
-    text-align: center;
-}
-
-.inspirationLinks a {
-    height: 300px;
-    width: 300px;
-    border: 1px solid white;
-    margin: 10px 10px 10px 10px;
-    display: inline-block;
-    background-size: cover;
-}
-
-.Nadia {
-    background: url("img/Nadia.jpg") no-repeat;
-}
-
-.Evangelion {
-    background: url("img/Evangelion.jpg") no-repeat;
-}
-
-.Beethoven {
-    background: url("img/Beethoven.jpg") no-repeat;
-}
-
-.bach {
-    background: url("img/bach.jpg") no-repeat;
-}
-
-.krishnamurti {
-    background: url("img/krishnamurti.jpg") no-repeat;
-}
-
-.orwell {
-    background: url("img/orwell.jpg") no-repeat;
-}
-
-.contact h1,
-h3 {
-    margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    text-align: left;
-}
-
-.contactLinks {
-    margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    text-align: left;
-}
-
-.contactLinks a img {
-    border-radius: 50px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
-    width: 50px;
-    margin: 10px;
-}
+/* Bright Equalizer */
+.bar { width: 3px; height: 10px; background: #6366f1; margin: 0 1px; display: inline-block; animation: equalize 1s infinite; }
+.bar:nth-child(1) { animation-delay: 0.1s; } .bar:nth-child(2) { animation-delay: 0.4s; }
+.bar:nth-child(3) { animation-delay: 0.2s; } .bar:nth-child(4) { animation-delay: 0.5s; }
+.paused .bar { animation-play-state: paused; height: 3px; }
+@keyframes equalize { 0%, 100% { height: 4px; } 50% { height: 16px; } }
